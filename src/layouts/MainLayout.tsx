@@ -1,13 +1,11 @@
-import { ReactNode } from 'react';
 import Header from 'layouts/Header.tsx';
-import Footer from 'layouts/Footer.tsx';
+import { Outlet } from 'react-router-dom';
 
-const MainLayout = ({ children }: { children: ReactNode }) => {
+const MainLayout = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="flex-1 p-4 bg-gray-100">{children}</main>
-      <Footer />
+      <Outlet />
     </div>
   );
 };
