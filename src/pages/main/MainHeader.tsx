@@ -1,4 +1,4 @@
-import { UserIcon, MagnifyingGlassIcon } from '@heroicons/react/20/solid';
+import { UserIcon, MagnifyingGlassIcon } from '@heroicons/react/24/solid';
 import { useNavigate } from 'react-router-dom';
 
 const MainHeader = () => {
@@ -44,10 +44,10 @@ const MainHeader = () => {
           className="header-button bg-gray-200 hover:bg-gray-300"
           onClick={handleWrite}
         >
-          <MagnifyingGlassIcon className="h-5 w-5 text-black" />
+          <MagnifyingGlassIcon className="h-6 w-6 text-black" />
         </div>
         <div className="flex h-[40px] w-[40px] cursor-pointer items-center justify-center rounded-xl bg-gray-200 hover:bg-gray-300">
-          <UserIcon className="h-5 w-5 text-gray-400" />
+          <UserIcon className="h-6 w-6 text-gray-400" />
         </div>
       </div>
     </div>

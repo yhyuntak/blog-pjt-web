@@ -3,8 +3,8 @@ export interface PostDTO {
   title: string;
   content: string;
   userId: number;
-  createdAt: string;
-  createdBy: number;
-  updatedAt: string;
-  updatedBy: number;
+  createdAt?: string;
+  createdBy?: number;
+  updatedAt?: string;
+  updatedBy?: number;
 }
