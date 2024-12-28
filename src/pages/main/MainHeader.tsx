@@ -14,9 +14,9 @@ const MainHeader = () => {
     navigate('/write');
   };
   return (
-    <div className="h-25 flex items-center justify-between whitespace-nowrap border-b border-solid border-[#E5E8EB] p-10">
+    <div className="h-25 flex items-center justify-between whitespace-nowrap border-b border-solid border-[#E5E8EB] py-10 sm:px-3 md:px-5 lg:px-10">
       <div
-        className="h-auto cursor-pointer select-none rounded p-2 text-3xl hover:bg-gray-300"
+        className="h-auto cursor-pointer select-none rounded p-2 hover:bg-gray-300 sm:text-xl md:text-2xl lg:text-3xl"
         onClick={handleGoHome}
       >
         뽀또의 개발 일지

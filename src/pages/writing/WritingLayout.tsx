@@ -1,10 +1,10 @@
 import WritingHeader from 'pages/writing/WritingHeader.tsx';
 import { useState } from 'react';
 import { Post } from 'types/post.ts';
-import { createPost } from 'api/post/postApi.ts';
 import { PostDTO } from 'api/post/postDTO.ts';
 import { useNavigate } from 'react-router-dom';
 import WritingMain from 'pages/writing/WritingMain.tsx';
+import { postApi } from 'api/index.ts';
 
 const WritingLayout = () => {
   const navigate = useNavigate();
@@ -21,7 +21,7 @@ const WritingLayout = () => {
       content: post.content,
       userId: 1,
     };
-    await createPost(requestPost);
+    await postApi.createPost(requestPost);
     // todo : post/{id}로 이동하는 것으로 변경해야함.
     // navigate(`/post/${data.id}`);
     navigate(`/`);

@@ -5,3 +5,8 @@ export const createPost = async (post: PostDTO) => {
   const response = await axiosInstance.post('/post', post);
   return response.data;
 };
+
+export const getPosts = async (): Promise<PostDTO[]> => {
+  const response = await axiosInstance.get('/post');
+  return response.data;
+};
