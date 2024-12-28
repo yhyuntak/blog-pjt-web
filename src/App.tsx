@@ -1,19 +1,17 @@
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
-import MainLayout from 'layouts/MainLayout';
+import MainLayout from 'pages/main/MainLayout.tsx';
 import HomePage from 'pages/HomePage';
-import LoginPage from 'pages/LoginPage';
-import WritePage from 'pages/WritePage';
+import WritingLayout from 'pages/writing/WritingLayout.tsx';
 
 const App = () => {
   return (
-    // todo : 깃허브 레파지토리, remote 설정 이름 바꾸기.
+    // write를 저렇게 빼는게 맞는진 모르겠음.
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<HomePage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/write" element={<WritePage />} />
         </Route>
+        <Route path="/write" element={<WritingLayout />}></Route>
       </Routes>
     </BrowserRouter>
   );

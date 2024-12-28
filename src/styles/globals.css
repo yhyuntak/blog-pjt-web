@@ -2,9 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  font-size: 16px;
+}
+
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Noto Sans NKo', sans-serif;
   margin: 0;
   padding: 0;
 }
 
+.layout {
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh;
+  max-width: 1280px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-button {
+  display: flex;
+  height: 2.5rem;
+  width: 5rem;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  color: white;
+}

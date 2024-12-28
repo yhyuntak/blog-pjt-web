@@ -38,7 +38,8 @@
       "store/*": ["store/*"],
       "styles/*": ["styles/*"],
       "types/*": ["types/*"],
-      "molecules/*": ["components/molecules/*"]
+      "utils/*": ["utils/*"],
+      "api/*": ["api/*"],
     },
   },
   "include": ["src"],
