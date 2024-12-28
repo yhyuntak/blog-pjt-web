@@ -1,6 +1,6 @@
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import MainLayout from 'pages/main/MainLayout.tsx';
-import HomePage from 'pages/HomePage';
+import HomePage from 'pages/home/HomePage.tsx';
 import WritingLayout from 'pages/writing/WritingLayout.tsx';
 
 const App = () => {
