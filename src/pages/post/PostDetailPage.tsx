@@ -4,7 +4,7 @@ import { postApi } from 'api/index.ts';
 import { PostDTO } from 'api/post/postDTO.ts';
 import { EllipsisVerticalIcon } from '@heroicons/react/24/solid';
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
-import { deletePost } from 'api/post/postApi.ts';
+import Markdown from 'react-markdown';
 
 const PostDetailPage = () => {
   const navigate = useNavigate();
@@ -74,7 +74,10 @@ const PostDetailPage = () => {
             </DropdownMenu.Content>
           </DropdownMenu.Root>
         </div>
-        <div className="px-4"> {post?.content} </div>
+        <div className="mx-4 w-[47.5rem] border" />
+        <div className="w-full overflow-y-auto">
+          <Markdown className="prose" children={post?.content || ''} />
+        </div>
       </main>
       <div className="w-60 flex-shrink-0 flex-grow-0 border">우측 사이드바</div>
     </div>
