@@ -44,11 +44,10 @@ const PostDetailPage = () => {
   }, []);
 
   return (
-    <div className="flex h-full justify-between">
-      <div className="w-60 flex-shrink-0 flex-grow-0 border">좌측 사이드바</div>
-      <main className="flex w-[50rem] flex-shrink-0 flex-col border">
+    <>
+      <main className="flex w-auto flex-col border">
         <div className="flex items-center justify-between p-4">
-          <div className="text-4xl font-bold"> {post?.title} </div>
+          <div className="w-full text-4xl font-bold"> {post?.title} </div>
           <DropdownMenu.Root>
             <DropdownMenu.Trigger asChild>
               <div className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-xl hover:bg-gray-100">
@@ -78,9 +77,11 @@ const PostDetailPage = () => {
         <div className="w-full overflow-y-auto">
           <Markdown className="prose" children={post?.content || ''} />
         </div>
+        <aside className="md:none fixed right-0 hidden h-full w-56 border xl:block">
+          우측 사이드바
+        </aside>
       </main>
-      <div className="w-60 flex-shrink-0 flex-grow-0 border">우측 사이드바</div>
-    </div>
+    </>
   );
 };
 

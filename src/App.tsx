@@ -3,6 +3,7 @@ import MainLayout from 'pages/main/MainLayout.tsx';
 import HomePage from 'pages/home/HomePage.tsx';
 import WritingLayout from 'pages/writing/WritingLayout.tsx';
 import PostDetailPage from 'pages/post/PostDetailPage.tsx';
+import PostDetailLayout from 'pages/post/PostDetailLayout.tsx';
 
 const App = () => {
   return (
@@ -11,7 +12,9 @@ const App = () => {
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<HomePage />} />
-          <Route path="post/:id" element={<PostDetailPage />} />
+        </Route>
+        <Route path="/post/:id" element={<PostDetailLayout />}>
+          <Route index element={<PostDetailPage />} />
         </Route>
         <Route path="/write" element={<WritingLayout />}></Route>
       </Routes>

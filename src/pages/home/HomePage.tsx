@@ -10,6 +10,9 @@ const HomePage = () => {
   const getPosts = async () => {
     const data = await postApi.getPosts();
     data.forEach((post) => {
+      if (!post.createdAt) {
+        return null;
+      }
       post.createdAt = formatDate(post.createdAt);
     });
     setPosts(data);
@@ -20,7 +23,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center gap-10 py-10">
+    <div className="flex flex-col items-center gap-10 pb-10 pt-20">
       <main className="relative flex h-full flex-shrink-0 flex-col items-center justify-center">
         <img alt="main_picture" src="/src/assets/dairy_dog.png" />
         <div className="text-gray-300">
