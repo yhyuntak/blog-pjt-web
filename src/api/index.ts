@@ -1,3 +1,4 @@
 import * as postApi from './post/postApi';
+import * as categoryApi from './category/categoryApi';
 
-export { postApi };
+export { postApi, categoryApi };

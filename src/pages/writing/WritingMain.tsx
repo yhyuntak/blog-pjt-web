@@ -25,7 +25,6 @@ const WritingMain = () => {
 
   const handleSave = async () => {
     // todo : userId는 나중에 로그인 관련 진행되면 변경해야함.
-    console.log(location.state?.post);
     const requestPost: PostDTO = {
       id: post.id || undefined,
       title: post.title,

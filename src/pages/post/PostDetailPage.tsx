@@ -45,7 +45,7 @@ const PostDetailPage = () => {
 
   return (
     <>
-      <main className="flex w-auto flex-col border">
+      <main className="flex h-full w-auto flex-col border">
         <div className="flex items-center justify-between p-4">
           <div className="w-full text-4xl font-bold"> {post?.title} </div>
           <DropdownMenu.Root>

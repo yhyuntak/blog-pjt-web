@@ -9,7 +9,7 @@ const PostDetailLayout = () => {
         <aside className="fixed left-0 hidden h-full w-56 border lg:block">
           좌측 사이드바
         </aside>
-        <div className="absolute left-0 w-lvw lg:left-56 xl:static xl:w-auto">
+        <div className="absolute left-0 h-lvh w-lvw lg:left-56 xl:static xl:w-auto">
           <Outlet />
         </div>
       </div>
